@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: myfont;
+}
+@font-face {
+  font-family: myfont;
+  src: url(fonts/Roboto-Medium.ttf);
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.box {
+  position: relative;
+  width: 80px;
+  height: 490px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#div {
+  position: absolute;
+  inset: 2px;
+  background: #28292d;
+  padding: 60px 150px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  color: #45f3ff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+.inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #45f3ff;
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+  height: 44px;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+.links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  text-decoration: beige;
+}
+.links a:hover,
+.links a:nth-child(2) {
+  color: #45f3ff;
+}
+#signup,
+.login {
+  border: none;
+  outline: none;
+  padding: 11px 25px;
+  background: #45f3ff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 100px;
+  margin-top: 10px;
+}
+#signup:active,
+.login:active {
+  opacity: 0.8;
+}
+#login {
+  position: 80px;
+}
+.hamburger {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  max-width: 50px;
+  max-height: 50px;
+}
+.gif {
+  position: absolute;
+  top: 300px;
+  left: 750px;
+}
+.main-container {
+  text-align: center;
+  color: #0000ff;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.student {
+  font-size: 15px;
+  margin-left: 570px;
+  /* width: 40%; */
+  /* display: flex; */
+  /* justify-content: right;
+  flex-direction: column; */
+}
+
+#submit {
+  position: relative;
+  left: 270px;
+}
+.student {
+  text-align: left;
+}
+select {
+  border-radius: 2px;
+  /* width: 50%; */
+  text-align: center;
+  color: #0000ff;
+  border: #0000ff 1px solid;
+}
+.option {
+  font-size: 16px;
+  width: 50%;
+}
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  background-clip: padding-box;
+  text-align: center;
+}
+.button {
+  margin-top: 60px;
+  position: absolute;
+  right: 250px;
+}
+.heading {
+  text-align: center;
+  color: #0000ff;
+  margin-top: 20px;
+  font-size: 40px;
+}
+#secA {
+  font-size: 1em;
+  padding: 15px;
+  color: #0000ff;
+  position: absolute;
+  top: 10px;
+  border: 2px solid #06d85f;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+#secB {
+  font-size: 1em;
+  padding: 15px;
+  color: #0000ff;
+  border: 2px solid #06d85f;
+  position: absolute;
+  top: 80px;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+#secC {
+  font-size: 1em;
+  padding: 15px;
+  color: #0000ff;
+  position: absolute;
+  top: 150px;
+  border: 2px solid #06d85f;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+#teacherLogOut {
+  position: absolute;
+  top: 20px;
+  left: 1400px;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 70%;
+  }
+}
+#saylani {
+  width: 150px;
+}
+.class-details {
+  color: #0000ff;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#select {
+  position: relative;
+  right: 130px;
+}
+.student {
+  margin-top: 30px;
+}
